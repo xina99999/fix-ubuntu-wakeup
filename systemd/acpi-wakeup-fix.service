@@ -1,0 +1,10 @@
+[Unit]
+Description=Fix ACPI wakeup devices (LID0, XHC)
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/etc/systemd/acpi-wakeup-fix.sh
+
+[Install]
+WantedBy=multi-user.target
